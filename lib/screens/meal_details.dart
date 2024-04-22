@@ -26,9 +26,11 @@ class MealDetailsScreen extends ConsumerWidget {
               ScaffoldMessenger.of(context).clearSnackBars();
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
-                  content: Text(wasAdded
-                      ? 'Meal marked as a favorite.'
-                      : 'Meal no longer a favorite.'),
+                  content: Text(
+                    wasAdded
+                        ? 'Meal marked as a favorite.'
+                        : 'Meal no longer a favorite.',
+                  ),
                 ),
               );
             },
@@ -50,11 +52,14 @@ class MealDetailsScreen extends ConsumerWidget {
         physics: const BouncingScrollPhysics(),
         child: Column(
           children: [
-            Image.network(
-              meal.imageUrl,
-              width: double.infinity,
-              height: 300,
-              fit: BoxFit.cover,
+            Hero(
+              tag: meal.id,
+              child: Image.network(
+                meal.imageUrl,
+                width: double.infinity,
+                height: 300,
+                fit: BoxFit.cover,
+              ),
             ),
             const SizedBox(height: 14),
             Text(
