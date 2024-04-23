@@ -2,6 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:meal_mate/models/category.dart';
 import 'package:meal_mate/models/meal.dart';
 
+const String imagePath = 'assets/images';
+
+class ImageAssets {
+  static const String getStarted = '$imagePath/get_started.png';
+}
+
 const availableCategories = [
   Category(
     id: 'c1',

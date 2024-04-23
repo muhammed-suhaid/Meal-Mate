@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:meal_mate/screens/tabs.dart';
+import 'package:meal_mate/screens/get_started.dart';
 
 void main() {
   runApp(
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         textTheme: GoogleFonts.latoTextTheme(),
       ),
       debugShowCheckedModeBanner: false,
-      home: const TabsScreen(),
+      home: const GetStartedScreen(),
     );
   }
 }
