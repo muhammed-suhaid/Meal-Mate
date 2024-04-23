@@ -49,7 +49,7 @@ class GetStartedScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 8),
                 Text(
-                  "De Chef is a user-friendly recipe app designed for those who are new to cooking and want to try new recipes at home",
+                  "Meal Mate is a user-friendly recipe app designed for those who are new to cooking and want to try new recipes at home",
                   style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                         color: Colors.white60,
                       ),
@@ -71,7 +71,7 @@ class GetStartedScreen extends StatelessWidget {
                     ),
                     alignment: Alignment.center,
                     child: Text(
-                      'Get Started',
+                      'Start Cooking',
                       style: Theme.of(context).textTheme.titleLarge!.copyWith(
                             color: Colors.white,
                           ),
