@@ -16,13 +16,13 @@ class MealitemTrait extends StatelessWidget {
         Icon(
           icon,
           size: 17,
-          color: Colors.white,
+          color: Colors.grey,
         ),
         const SizedBox(width: 6),
         Text(
           label,
           style: const TextStyle(
-            color: Colors.white,
+            color: Colors.grey,
           ),
         )
       ],

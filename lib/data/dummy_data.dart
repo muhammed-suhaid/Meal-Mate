@@ -6,6 +6,7 @@ const String imagePath = 'assets/images';
 
 class ImageAssets {
   static const String getStarted = '$imagePath/get_started.png';
+  static const String pasta = '$imagePath/pasta.png';
 }
 
 const availableCategories = [
@@ -68,7 +69,7 @@ const dummyMeals = [
       'c1',
       'c2',
     ],
-    title: 'Spaghetti with Tomato Sauce',
+    title: 'Spaghetti',
     affordability: Affordability.affordable,
     complexity: Complexity.simple,
     imageUrl:
@@ -95,6 +96,9 @@ const dummyMeals = [
     isVegan: true,
     isVegetarian: true,
     isLactoseFree: true,
+    rate: 4.4,
+    reviews: 23,
+    calorie: 120,
   ),
   Meal(
     id: 'm2',
@@ -123,6 +127,9 @@ const dummyMeals = [
     isVegan: false,
     isVegetarian: false,
     isLactoseFree: false,
+    rate: 4.5,
+    reviews: 29,
+    calorie: 140,
   ),
   Meal(
     id: 'm3',
@@ -155,6 +162,9 @@ const dummyMeals = [
     isVegan: false,
     isVegetarian: false,
     isLactoseFree: true,
+    rate: 4.2,
+    reviews: 20,
+    calorie: 130,
   ),
   Meal(
     id: 'm4',
@@ -190,6 +200,9 @@ const dummyMeals = [
     isVegan: false,
     isVegetarian: false,
     isLactoseFree: false,
+    rate: 4.0,
+    reviews: 15,
+    calorie: 100,
   ),
   Meal(
     id: 'm5',
@@ -226,6 +239,9 @@ const dummyMeals = [
     isVegan: false,
     isVegetarian: true,
     isLactoseFree: true,
+    rate: 4.2,
+    reviews: 25,
+    calorie: 150,
   ),
   Meal(
     id: 'm6',
@@ -262,6 +278,9 @@ const dummyMeals = [
     isVegan: false,
     isVegetarian: true,
     isLactoseFree: false,
+    rate: 4.7,
+    reviews: 90,
+    calorie: 120,
   ),
   Meal(
     id: 'm7',
@@ -293,13 +312,16 @@ const dummyMeals = [
     isVegan: false,
     isVegetarian: true,
     isLactoseFree: false,
+    rate: 4.4,
+    reviews: 23,
+    calorie: 120,
   ),
   Meal(
     id: 'm8',
     categories: [
       'c8',
     ],
-    title: 'Creamy Indian Chicken Curry',
+    title: 'Creamy Indian Chicken',
     affordability: Affordability.pricey,
     complexity: Complexity.challenging,
     imageUrl:
@@ -326,6 +348,9 @@ const dummyMeals = [
     isVegan: false,
     isVegetarian: false,
     isLactoseFree: true,
+    rate: 4.2,
+    reviews: 50,
+    calorie: 120,
   ),
   Meal(
     id: 'm9',
@@ -375,6 +400,9 @@ const dummyMeals = [
     isVegan: false,
     isVegetarian: true,
     isLactoseFree: false,
+    rate: 4.5,
+    reviews: 23,
+    calorie: 180,
   ),
   Meal(
     id: 'm10',
@@ -383,7 +411,7 @@ const dummyMeals = [
       'c5',
       'c10',
     ],
-    title: 'Asparagus Salad with Cherry Tomatoes',
+    title: 'Asparagus Salad',
     affordability: Affordability.luxurious,
     complexity: Complexity.simple,
     imageUrl:
@@ -409,5 +437,8 @@ const dummyMeals = [
     isVegan: true,
     isVegetarian: true,
     isLactoseFree: true,
+    rate: 4.4,
+    reviews: 23,
+    calorie: 120,
   ),
 ];

@@ -20,10 +20,8 @@ class MyApp extends StatelessWidget {
       title: 'Meal Mate',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
-          brightness: Brightness.dark,
-          seedColor: const Color.fromARGB(255, 131, 57, 0),
+          seedColor: const Color.fromARGB(37, 174, 135, 1),
         ),
-        useMaterial3: true,
         textTheme: GoogleFonts.latoTextTheme(),
       ),
       debugShowCheckedModeBanner: false,

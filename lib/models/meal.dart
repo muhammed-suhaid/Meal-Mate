@@ -25,6 +25,9 @@ class Meal {
     required this.isLactoseFree,
     required this.isVegan,
     required this.isVegetarian,
+    required this.rate,
+    required this.reviews,
+    required this.calorie,
   });
 
   final String id;
@@ -40,4 +43,7 @@ class Meal {
   final bool isLactoseFree;
   final bool isVegan;
   final bool isVegetarian;
+  final double rate;
+  final int reviews;
+  final double calorie;
 }

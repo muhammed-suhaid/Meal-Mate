@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:iconsax/iconsax.dart';
 import 'package:meal_mate/providers/favourites_provider.dart';
 import 'package:meal_mate/providers/filters_provider.dart';
 import 'package:meal_mate/screens/categories.dart';
 import 'package:meal_mate/screens/filters.dart';
+import 'package:meal_mate/screens/home_screen/home_screen.dart';
 import 'package:meal_mate/screens/meals.dart';
-import 'package:meal_mate/widgets/main_drawer.dart';
 
 const kInitialFilters = {
   Filter.glutenFree: false,
@@ -44,35 +45,38 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
   @override
   Widget build(BuildContext context) {
     final availableMeals = ref.watch(filteredMealsProvider);
-    Widget activePage = CategoriesScreen(
+    Widget activePage = HomeScreen(
       availableMeals: availableMeals,
     );
-    var activePageTitle = 'Categories';
+
     if (_selectedPageindex == 1) {
+      activePage = CategoriesScreen(
+        availableMeals: availableMeals,
+      );
+    }
+    if (_selectedPageindex == 2) {
       final favouriteMeals = ref.watch(favouriteMealsProvider);
       activePage = MealsScreen(
         meals: favouriteMeals,
       );
-      activePageTitle = 'Your Favourites';
     }
     return Scaffold(
-      appBar: AppBar(
-        title: Text(activePageTitle),
-      ),
-      drawer: MainDrawer(
-        onSelectScreen: _setString,
-      ),
       body: activePage,
       bottomNavigationBar: BottomNavigationBar(
         onTap: _selectPage,
         currentIndex: _selectedPageindex,
+        selectedItemColor: const Color.fromRGBO(37, 174, 135, 1),
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.set_meal),
-            label: 'Categories',
+            icon: Icon(Iconsax.home5),
+            label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.star),
+            icon: Icon(Icons.restaurant),
+            label: 'Meals',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Iconsax.heart5),
             label: 'Favourites',
           ),
         ],
