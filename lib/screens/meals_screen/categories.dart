@@ -3,7 +3,7 @@ import 'package:iconsax/iconsax.dart';
 import 'package:meal_mate/data/dummy_data.dart';
 import 'package:meal_mate/models/category.dart';
 import 'package:meal_mate/models/meal.dart';
-import 'package:meal_mate/screens/filters.dart';
+import 'package:meal_mate/screens/component_screen/filters.dart';
 import 'package:meal_mate/screens/meals.dart';
 import 'package:meal_mate/screens/meals_screen/widgets/category_list_item.dart';
 
