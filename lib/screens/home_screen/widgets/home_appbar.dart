@@ -40,7 +40,7 @@ class HomeAppbar extends StatelessWidget {
         ),
         const SizedBox(height: 10),
         
-        HomeSearchBar()
+        const HomeSearchBar(),
       ],
     );
   }

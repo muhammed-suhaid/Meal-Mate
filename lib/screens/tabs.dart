@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:meal_mate/providers/favourites_provider.dart';
 import 'package:meal_mate/providers/filters_provider.dart';
-import 'package:meal_mate/screens/categories.dart';
+import 'package:meal_mate/screens/meals_screen/categories.dart';
 import 'package:meal_mate/screens/filters.dart';
 import 'package:meal_mate/screens/home_screen/home_screen.dart';
 import 'package:meal_mate/screens/meals.dart';
