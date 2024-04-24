@@ -4,7 +4,7 @@ import 'package:meal_mate/models/meal.dart';
 import 'package:meal_mate/screens/home_screen/widgets/home_ads.dart';
 import 'package:meal_mate/screens/home_screen/widgets/home_categories.dart';
 import 'package:meal_mate/screens/home_screen/widgets/home_trending.dart';
-import 'package:meal_mate/widgets/home_appbar.dart';
+import 'package:meal_mate/screens/home_screen/widgets/home_appbar.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({

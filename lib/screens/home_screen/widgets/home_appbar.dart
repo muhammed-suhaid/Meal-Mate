@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:meal_mate/screens/home_screen/widgets/home_search_bar.dart';
 
 class HomeAppbar extends StatelessWidget {
   const HomeAppbar({
@@ -38,38 +39,8 @@ class HomeAppbar extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 10),
-        Container(
-          margin: const EdgeInsets.all(16),
-          padding: const EdgeInsets.only(left: 16),
-          decoration: BoxDecoration(
-            color: Colors.grey[300],
-            borderRadius: BorderRadius.circular(24),
-          ),
-          child: Row(
-            children: [
-              const Icon(Icons.search),
-              const SizedBox(width: 8),
-              Expanded(
-                child: TextFormField(
-                  decoration: InputDecoration(
-                    hintText: "Search Recipes",
-                    hintStyle: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black.withOpacity(0.5),
-                        ),
-                    border: const OutlineInputBorder(
-                      borderSide: BorderSide.none,
-                    ),
-                    contentPadding: const EdgeInsets.only(
-                      top: 14,
-                      bottom: 14,
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
+        
+        HomeSearchBar()
       ],
     );
   }
