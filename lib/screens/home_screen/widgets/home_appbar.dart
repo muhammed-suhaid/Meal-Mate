@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:meal_mate/screens/component_screen/filters.dart';
+import 'package:meal_mate/screens/component/filters.dart';
 import 'package:meal_mate/screens/home_screen/widgets/home_search_bar.dart';
 
 class HomeAppbar extends StatelessWidget {

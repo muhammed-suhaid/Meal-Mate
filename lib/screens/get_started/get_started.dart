@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meal_mate/data/dummy_data.dart';
-import 'package:meal_mate/screens/component_screen/tabs.dart';
+import 'package:meal_mate/screens/component/tabs.dart';
 
 class GetStartedScreen extends StatelessWidget {
   const GetStartedScreen({super.key});
