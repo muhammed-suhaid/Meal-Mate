@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:meal_mate/screens/filters.dart';
 import 'package:meal_mate/screens/home_screen/widgets/home_search_bar.dart';
 
 class HomeAppbar extends StatelessWidget {
@@ -25,7 +26,13 @@ class HomeAppbar extends StatelessWidget {
               ),
               const Spacer(),
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => const FiltersScreen(),
+                    ),
+                  );
+                },
                 icon: const Icon(Iconsax.setting_5),
                 style: IconButton.styleFrom(
                   shape: RoundedRectangleBorder(
@@ -39,7 +46,6 @@ class HomeAppbar extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 10),
-        
         const HomeSearchBar(),
       ],
     );

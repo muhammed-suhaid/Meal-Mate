@@ -3,6 +3,7 @@ import 'package:iconsax/iconsax.dart';
 import 'package:meal_mate/data/dummy_data.dart';
 import 'package:meal_mate/models/category.dart';
 import 'package:meal_mate/models/meal.dart';
+import 'package:meal_mate/screens/filters.dart';
 import 'package:meal_mate/screens/meals.dart';
 import 'package:meal_mate/screens/meals_screen/widgets/category_list_item.dart';
 
@@ -70,7 +71,7 @@ class _CategoriesScreenState extends State<CategoriesScreen>
               child: Row(
                 children: [
                   Text(
-                    "Discover Best \nRecipes",
+                    "Select  \nCategory",
                     style: Theme.of(context).textTheme.titleLarge!.copyWith(
                           fontSize: 30,
                           fontWeight: FontWeight.bold,
@@ -79,7 +80,13 @@ class _CategoriesScreenState extends State<CategoriesScreen>
                   ),
                   const Spacer(),
                   IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => const FiltersScreen(),
+                        ),
+                      );
+                    },
                     icon: const Icon(Iconsax.setting_5),
                     style: IconButton.styleFrom(
                       shape: RoundedRectangleBorder(
