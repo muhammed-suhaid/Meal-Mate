@@ -29,7 +29,6 @@ class _HomeSearchBarState extends State<HomeSearchBar> {
               cursorColor: const Color.fromRGBO(37, 174, 135, 1),
               controller: searchController,
               onChanged: (value) {
-                print(searchController.text);
                 setState(() {
                   hasvalue = true;
                 });
