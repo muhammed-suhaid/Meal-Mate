@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
 
-class HomeSearchBar extends StatelessWidget {
+class HomeSearchBar extends StatefulWidget {
   const HomeSearchBar({super.key});
 
+  @override
+  State<HomeSearchBar> createState() => _HomeSearchBarState();
+}
+
+final TextEditingController searchController = TextEditingController();
+bool hasvalue = false;
+
+class _HomeSearchBarState extends State<HomeSearchBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -14,18 +22,32 @@ class HomeSearchBar extends StatelessWidget {
       ),
       child: Row(
         children: [
+          const Icon(Icons.search),
           const SizedBox(width: 8),
           Expanded(
             child: TextFormField(
               cursorColor: const Color.fromRGBO(37, 174, 135, 1),
+              controller: searchController,
+              onChanged: (value) {
+                print(searchController.text);
+                setState(() {
+                  hasvalue = true;
+                });
+              },
               decoration: InputDecoration(
                 hintText: "Search Recipes",
-                suffixIcon: IconButton(
-                  onPressed: () {
-                    
-                  },
-                  icon: const Icon(Icons.search),
-                ),
+                suffixIcon: hasvalue
+                    ? IconButton(
+                        onPressed: () {
+                          searchController.clear();
+
+                          setState(() {
+                            hasvalue = false;
+                          });
+                        },
+                        icon: const Icon(Icons.close),
+                      )
+                    : null,
                 hintStyle: Theme.of(context).textTheme.bodyMedium!.copyWith(
                       fontWeight: FontWeight.bold,
                       color: Colors.black.withOpacity(0.5),
@@ -45,5 +67,3 @@ class HomeSearchBar extends StatelessWidget {
     );
   }
 }
-
-final TextEditingController searchController = TextEditingController();
