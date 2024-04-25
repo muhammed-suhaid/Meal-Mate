@@ -15,7 +15,7 @@ class CategoryListItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onSelectCategory,
-      splashColor: Theme.of(context).primaryColor,
+      splashColor: Colors.transparent,
       borderRadius: BorderRadius.circular(16),
       child: Container(
         height: 70,

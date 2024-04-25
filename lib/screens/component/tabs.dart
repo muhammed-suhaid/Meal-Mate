@@ -3,10 +3,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:meal_mate/providers/favourites_provider.dart';
 import 'package:meal_mate/providers/filters_provider.dart';
+import 'package:meal_mate/screens/component/meal_list.dart';
 import 'package:meal_mate/screens/meals_screen/categories.dart';
-import 'package:meal_mate/screens/component/filters.dart';
 import 'package:meal_mate/screens/home_screen/home_screen.dart';
-import 'package:meal_mate/screens/meals.dart';
 
 const kInitialFilters = {
   Filter.glutenFree: false,
@@ -31,17 +30,6 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
     });
   }
 
-  void _setString(String identifier) {
-    Navigator.pop(context);
-    if (identifier == 'filters') {
-      Navigator.of(context).push<Map<Filter, bool>>(
-        MaterialPageRoute(
-          builder: (context) => const FiltersScreen(),
-        ),
-      );
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     final availableMeals = ref.watch(filteredMealsProvider);
@@ -56,7 +44,7 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
     }
     if (_selectedPageindex == 2) {
       final favouriteMeals = ref.watch(favouriteMealsProvider);
-      activePage = MealsScreen(
+      activePage = MealListScreen(
         meals: favouriteMeals,
       );
     }

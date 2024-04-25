@@ -3,6 +3,7 @@ import 'package:meal_mate/data/dummy_data.dart';
 import 'package:meal_mate/models/category.dart';
 import 'package:meal_mate/models/meal.dart';
 import 'package:meal_mate/screens/home_screen/widgets/home_meal_item.dart';
+import 'package:meal_mate/screens/meal_details.dart';
 
 class HomeCategories extends StatefulWidget {
   const HomeCategories({
@@ -23,6 +24,16 @@ class _HomeCategoriesState extends State<HomeCategories> {
     return filteredMeals = widget.availableMeals
         .where((meal) => meal.categories.contains(category.id))
         .toList();
+  }
+
+  void onSelectMeal(BuildContext context, Meal meal) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => MealDetailsScreen(
+          meal: meal,
+        ),
+      ),
+    );
   }
 
   @override
@@ -91,6 +102,9 @@ class _HomeCategoriesState extends State<HomeCategories> {
         HomeMealItem(
           categorizedMeals:
               _categorizedMeals(availableCategories[currentCategory]),
+          onSelectMeal: (Meal meal) {
+            onSelectMeal(context, meal);
+          },
         ),
       ],
     );

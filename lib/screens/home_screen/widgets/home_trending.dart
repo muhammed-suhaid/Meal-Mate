@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meal_mate/models/meal.dart';
 import 'package:meal_mate/screens/home_screen/widgets/home_meal_item.dart';
+import 'package:meal_mate/screens/meal_details.dart';
 
 class HomeTrendingMeals extends StatelessWidget {
   const HomeTrendingMeals({
@@ -11,6 +12,16 @@ class HomeTrendingMeals extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    void onSelectMeal(BuildContext context, Meal meal) {
+      Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (context) => MealDetailsScreen(
+            meal: meal,
+          ),
+        ),
+      );
+    }
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -27,6 +38,9 @@ class HomeTrendingMeals extends StatelessWidget {
         ),
         HomeMealItem(
           categorizedMeals: availableMeals,
+          onSelectMeal: (Meal meal) {
+            onSelectMeal(context, meal);
+          },
         ),
       ],
     );

@@ -4,7 +4,7 @@ import 'package:meal_mate/data/dummy_data.dart';
 import 'package:meal_mate/models/category.dart';
 import 'package:meal_mate/models/meal.dart';
 import 'package:meal_mate/screens/component/filters.dart';
-import 'package:meal_mate/screens/meals.dart';
+import 'package:meal_mate/screens/component/meal_list.dart';
 import 'package:meal_mate/screens/meals_screen/widgets/category_list_item.dart';
 
 class CategoriesScreen extends StatefulWidget {
@@ -47,7 +47,7 @@ class _CategoriesScreenState extends State<CategoriesScreen>
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => MealsScreen(
+        builder: (context) => MealListScreen(
           title: category.title,
           meals: filteredMeals,
         ),
