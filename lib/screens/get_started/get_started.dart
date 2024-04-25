@@ -44,7 +44,7 @@ class GetStartedScreen extends StatelessWidget {
                   style: Theme.of(context).textTheme.titleLarge!.copyWith(
                         fontSize: 30,
                         fontWeight: FontWeight.bold,
-                        color: Colors.white70,
+                        color: Colors.white,
                       ),
                 ),
                 const SizedBox(height: 8),
