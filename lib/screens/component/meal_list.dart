@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meal_mate/models/meal.dart';
+import 'package:meal_mate/screens/component/meal_detail_screen.dart';
 import 'package:meal_mate/screens/component/meal_item.dart';
-import 'package:meal_mate/screens/meal_details.dart';
 
 class MealListScreen extends StatelessWidget {
   const MealListScreen({
@@ -67,26 +67,29 @@ class MealListScreen extends StatelessWidget {
           });
     }
     if (title == null) {
-      return SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 4),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-                child: Text(
-                  "Your Favourite\nRecipes",
-                  style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                        fontSize: 30,
-                        fontWeight: FontWeight.bold,
-                        color: const Color.fromRGBO(37, 174, 135, 1),
-                      ),
+      return SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
+        child: SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 4),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                  child: Text(
+                    "Your Favourite\nRecipes",
+                    style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                          color: const Color.fromRGBO(37, 174, 135, 1),
+                        ),
+                  ),
                 ),
-              ),
-              content,
-            ],
+                content,
+              ],
+            ),
           ),
         ),
       );

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:meal_mate/data/dummy_data.dart';
 import 'package:meal_mate/models/category.dart';
 import 'package:meal_mate/models/meal.dart';
+import 'package:meal_mate/screens/component/meal_detail_screen.dart';
 import 'package:meal_mate/screens/home_screen/widgets/home_meal_item.dart';
-import 'package:meal_mate/screens/meal_details.dart';
 
 class HomeCategories extends StatefulWidget {
   const HomeCategories({
