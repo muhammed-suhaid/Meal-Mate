@@ -28,9 +28,10 @@ class MealListScreen extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          const SizedBox(
-            height: 250,
-          ),
+          if (title == null)
+            const SizedBox(
+              height: 250,
+            ),
           Text(
             'Uh Ohh ... nothing here!',
             style: Theme.of(context).textTheme.headlineLarge!.copyWith(
