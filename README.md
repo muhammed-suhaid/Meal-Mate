@@ -1,6 +1,4 @@
-# Meal Mate 🍴
-
-This is my on-going new project "Meal Mate"
+# Meal Mate : Meal Recipe App🍴
 
 ### Overview:
 Meal Mate is your ultimate companion for exploring a wide variety of meals, managing favorites, and customizing your meal browsing experience with filters. Whether you're looking for inspiration or planning your next culinary adventure, Meal Mate has you covered.
