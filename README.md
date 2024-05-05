@@ -17,7 +17,8 @@ Meal Mate is your ultimate companion for exploring a wide variety of meals, mana
 3. **Meal Details Screen** : Provides detailed information about a selected meal, including ingredients and cooking instructions.
 4. **Favorites Screen** : Displays a list of favorited meals for quick reference.
 5. **Filters Screen** : Allows users to set various filters to customize the list of meals displayed.
-
+   
+Youtube Link : https://youtu.be/fBnUW1pjuww
 
 https://github.com/muhammed-suhaid/Meal-Mate/assets/106069427/f5eca283-c2eb-4ca6-af6b-6b342c59467e
 
